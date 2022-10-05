@@ -1,0 +1,1 @@
+* * * * * cd /docker/nextcloud && /usr/bin/docker-compose exec -T -u www-data nextcloud php -d memory_limit=-1 -f /var/www/html/cron.php --define apc.enable_cli=1
