@@ -67,6 +67,14 @@ services:
     image: redis
     restart: unless-stopped
     command: redis-server --requirepass ${NC_REDIS_PWD}
+    
+  clamav:
+    #debian: image: mkodockx/docker-clamav
+    image: mkodockx/docker-clamav:alpine
+    container_name: clamav
+    restart: unless-stopped
+    expose:
+      - '3310'
 
 networks:
   default:
